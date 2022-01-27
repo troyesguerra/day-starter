@@ -1,7 +1,7 @@
 const key = 'ac82331ec8dc4ead94c63150222001'
 const defaultLocation = 'manila';
 const days = 1;
-const url2 = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${defaultLocation}&days=${days}&aqi=yes&alerts=no`
+const url2 = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${defaultLocation}&days=${days}&aqi=yes&alerts=no`
 
 const form = document.querySelector('#form');
 const search = document.querySelector('.search')
@@ -174,7 +174,7 @@ form.addEventListener('submit', (e) => {
     console.log(searchTerm)
 
     const city = searchTerm;
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=${days}&aqi=yes&alerts=no`
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=${days}&aqi=yes&alerts=no`
     getData(url);
     search.value = '';
 })
